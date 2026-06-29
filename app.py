@@ -11,7 +11,8 @@ def get_bestsellers_omkar(category):
     """Get real Amazon bestsellers using Omkar API"""
     try:
         # Omkar API endpoint for Amazon bestsellers
-        url = f"https://api.omkar.cloud/amazon/bestsellers/"
+        url = f"https://api.omkar.cloud/amazon/search/?keyword={category}"
+
         
         headers = {
             "API-Key": API_KEY  # Important: header name is 'API-Key'
