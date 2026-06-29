@@ -42,7 +42,8 @@ def get_bestsellers_api():
     categories = {
         'electronics': 'https://www.amazon.com/Best-Sellers-Electronics/zgbs/electronics/',
         'books': 'https://www.amazon.com/Best-Sellers-Books/zgbs/books/',
-        'toys': 'https://www.amazon.com/Best-Sellers-Toys-Games/zgbs/toys-and-games/'
+        'toys': 'https://www.amazon.com/Best-Sellers-Toys-Games/zgbs/toys-and-games/',
+        'kitchen': 'https://www.amazon.com/Best-Sellers-Kitchen-Dining/zgbs/kitchen/'  # ✅ ADDED
     }
     
     url = categories.get(category, categories['electronics'])
@@ -58,7 +59,7 @@ def get_bestsellers_api():
 def home():
     return jsonify({
         'message': 'Amazon Best Sellers API',
-        'usage': '/bestsellers?category=electronics|books|toys'
+        'usage': '/bestsellers?category=electronics|books|toys|kitchen'  # Also update this line
     })
 
 if __name__ == '__main__':
